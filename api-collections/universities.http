@@ -1,0 +1,4 @@
+@baseUrl = http://universities.hipolabs.com
+
+# @name author
+GET {{baseUrl}}
