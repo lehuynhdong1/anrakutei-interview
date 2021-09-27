@@ -1,4 +1,3 @@
-import { PayloadAction } from '@reduxjs/toolkit';
 import userTypes from './user.types';
 
 const INITIAL_STATE = {
@@ -7,7 +6,7 @@ const INITIAL_STATE = {
   userErr: []
 };
 
-const userReducer = (state = INITIAL_STATE, action: PayloadAction) => {
+const userReducer = (state = INITIAL_STATE, action: any) => {
   switch (action.type) {
     case userTypes.SIGN_IN_SUCCESS:
       return {
