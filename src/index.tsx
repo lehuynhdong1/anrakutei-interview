@@ -10,6 +10,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      {/* TODO: Add connected react router */}
       <BrowserRouter>
         <App />
       </BrowserRouter>

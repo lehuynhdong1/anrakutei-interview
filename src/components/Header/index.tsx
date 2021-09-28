@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { signOutUserStart } from "../../redux/User/user.actions";
+import Nav from "../Nav";
 import "./styles.scss";
 
 const mapState = ({ user }: any) => ({
@@ -16,22 +17,8 @@ const Header = (props: any) => {
 
   return (
     <header className="header">
-      <nav>
-        <ul>
-          <li>
-            <a className="active" href="#home">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#news">News</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      {currentUser && <button onClick={() => signOut()}>SignOut</button>}
+      <Nav />
+      {currentUser && <button onClick={() => signOut()}>Sign Out</button>}
     </header>
   );
 };
