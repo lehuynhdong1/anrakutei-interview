@@ -1,3 +1,4 @@
+import { User } from '../../models';
 import userTypes from './user.types';
 
 export const emailSignInStart = (userCredentials: any) => ({
@@ -5,7 +6,7 @@ export const emailSignInStart = (userCredentials: any) => ({
   payload: userCredentials
 });
 
-export const signInSuccess = (user: any) => ({
+export const signInSuccess = (user: User) => ({
   type: userTypes.SIGN_IN_SUCCESS,
   payload: user
 });

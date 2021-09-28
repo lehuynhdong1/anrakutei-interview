@@ -7,7 +7,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: {
-    user: userReducer,
+    user: userReducer
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware({
