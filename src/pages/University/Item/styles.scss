@@ -10,7 +10,7 @@
   max-width: 480px;
 
   @include media-breakpoint-down(md) {
-    max-width: 90vw;
+    max-width: calc(100vw - 32px);
   }
 
   .item-field-key {
