@@ -1,5 +1,5 @@
-import { Universities } from "../../../models";
-import "./styles.scss";
+import { Universities } from '../../../models';
+import './styles.scss';
 
 interface Props {
   item: Universities;
@@ -11,15 +11,25 @@ const UniversityItem = (props: Props) => {
   return (
     <>
       <section className="university--item__section">
-        <p> name: {item.name}</p>
-        <p> country: {item.country}</p>
+        {item.name && (
+          <>
+            <span className="item-field-key">Name:</span>
+            <span className="item-field-value">{item.name}</span>
+          </>
+        )}
+        {item.country && (
+          <>
+            <span className="item-field-key">Country:</span>
+            <span className="item-field-value">{item.country}</span>
+          </>
+        )}
         {item.web_pages &&
-          item.web_pages.map((x, i) => {
+          item.web_pages.map((item, i) => {
             return (
-              <div key={x}>
-                slot{i + 1}: {x}
-                <iframe src={x} title={x}></iframe>
-              </div>
+              <>
+                <span className="item-field-key">Domain {i + 1}:</span>
+                <span className="item-field-value">{item}</span>
+              </>
             );
           })}
       </section>

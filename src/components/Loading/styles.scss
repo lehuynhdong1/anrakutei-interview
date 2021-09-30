@@ -1,0 +1,11 @@
+.loading__section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}

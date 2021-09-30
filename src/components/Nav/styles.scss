@@ -1,35 +1,80 @@
+@import "../../assets/scss/index";
+
 nav {
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: -webkit-sticky;
-    /* Safari */
-    position: sticky;
-    top: 0;
+  height: auto;
+  min-height: 50px;
+  max-height: 100px;
+  width: 100%;
 
-    li {
-      float: left;
+  h1 {
+    color: white;
+  }
 
-      p {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        cursor: pointer;
-        margin: initial;
+  .content {
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-        &.active {
-          background-color: #4CAF50;
-        }
+    @include media-breakpoint-down(md) {
+      width: 90%;
+      justify-content: space-between;
+    }
 
-        &:hover {
-          background-color: #111;
-        }
+  }
+
+  .actions {
+    text-align: right;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin: 0 10px;
+
+      :last-child {
+        margin-right: 0;
       }
     }
   }
+
+  .search-area {
+    border: 1px solid #dadbda;
+    border-radius: 3px;
+    transition: ease 1s 0s;
+    background-color: #fbfbfa;
+    text-align: center;
+
+    input {
+      font-size: 2rem;
+    }
+
+    &:focus {
+      outline: none;
+      text-align: left;
+    }
+  }
+
 }
+
+
+
+// @media only screen and (max-width: 680px) {
+//   div>nav>div>div:nth-child(2) {
+//     display: none;
+//   }
+// }
+
+// @media only screen and (max-width: 360px) {
+//   div>nav>div>div:nth-child(1) {
+//     margin-bottom: 10px;
+//     height: 30px;
+//   }
+
+//   div>nav>div {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }

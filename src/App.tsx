@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Route, Switch } from "react-router-dom";
-import HomepageLayout from "./layouts/HomepageLayout";
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import HomepageLayout from './layouts/HomepageLayout';
 // layouts
-import MainLayout from "./layouts/MainLayout";
+import MainLayout from './layouts/MainLayout';
 // pages
-import Homepage from "./pages/Homepage";
-import Login from "./pages/Login";
-import Registration from "./pages/Registration";
-import { checkUserSession } from "./redux/User/user.actions";
+import Homepage from './pages/Homepage';
+import Login from './pages/Login';
+import Registration from './pages/Registration';
+import University from './pages/University';
+import { checkUserSession } from './redux/User/user.actions';
 
 const App = (props: any) => {
   const dispatch = useDispatch();
@@ -27,6 +28,15 @@ const App = (props: any) => {
           render={() => (
             <HomepageLayout>
               <Homepage />
+            </HomepageLayout>
+          )}
+        />
+        <Route
+          exact
+          path="/university"
+          render={() => (
+            <HomepageLayout>
+              <University />
             </HomepageLayout>
           )}
         />
